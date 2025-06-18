@@ -1,12 +1,12 @@
 provider "aws" {
-region = "ap-south-1"
+region = "us-east-1"
 
 }
 
 resource "aws_instance" "key" {
-ami = "ami-012b9156f755804f5"
+ami = "ami-0f3f13f145e66a0a3"
 instance_type = "t2.micro"
-key_name = "nwkpp"
+key_name = "master"
 count = 1
 vpc_security_group_ids = [aws_security_group.demo-sg.id]
 tags = {
